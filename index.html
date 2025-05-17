@@ -1,193 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>To-Do List & Product Filter App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      padding: 0;
-      background: #f7f7f7;
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin-bottom: 40px;
-    }
-
-    input, select, button {
-      padding: 10px;
-      margin: 5px 0;
-      font-size: 16px;
-    }
-
-    button {
-      cursor: pointer;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    ul li {
-      padding: 10px;
-      background-color: #eee;
-      margin-bottom: 5px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 5px;
-    }
-
-    .product {
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      background-color: #fafafa;
-    }
-
-    .product h3 {
-      margin: 0;
-    }
-
-    .filters {
-      margin-bottom: 15px;
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 600px) {
-      .filters {
-        flex-direction: column;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio website-V.Bhaskar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="hedder">
+    <div class="contaner">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li ><a href="#hedder">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
 
-  <div class="container">
-    <h1>📝 To-Do List</h1>
-    <input type="text" id="taskInput" placeholder="Enter a new task..." />
-    <button onclick="addTask()">Add Task</button>
-    <ul id="taskList"></ul>
-  </div>
-
-  <div class="container">
-    <h1>🛍️ Product Listing</h1>
-    <div class="filters">
-      <select id="filterCategory" onchange="renderProducts()">
-        <option value="all">All Categories</option>
-        <option value="electronics">Electronics</option>
-        <option value="books">Books</option>
-        <option value="clothing">Clothing</option>
-      </select>
-
-      <select id="sortBy" onchange="renderProducts()">
-        <option value="price">Sort by Price</option>
-        <option value="rating">Sort by Rating</option>
-      </select>
+                
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Sudent</p>
+            <h1>Hi,I'm <span>Bhaskar</span> from Kakinada  </h1>
+        </div>
     </div>
-    <div id="productList"></div>
-  </div>
+</div>
+<!--about-->
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/profile1.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>My self V.Bhaskar,I am an enthusiastic and dedicated professional pursuing a Master's degree in 
+                     Computer Applications while leveraging my skills through various experiences in 
+                     customer service and academic environments. With certifications in Python and 
+                     web development, I excel in technical concepts and enjoy mentoring students in 
+                     complex subjects. I aim to contribute effectively to any organization that values 
+                     knowledge sharing and professional development</p>
+                     
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Python</span></li>
+                        <li><span>Java</span></li>
+                        <li><span>HTML/CSS</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>6months</span><br>Customer service Associate at COGENT E-SERIVICE PVT,Bengaluru</li>
+                        <li><span>6months</span><br>Junior Lecturer at Pragati vidyalaya junior college,Peddapuram</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Pursuing</span><br>MCA at Adikavi Nannaya University MSN campus, Kakinada</li>
+                        <li><span>2023</span><br>Bsc(MPCS) from SRVBSJB Maharani college ,Peddapuram</li>
+                        <li><span>2020</span><br>Intermediate from Pragati vidyalaya junior college,Peddapuram</li>
+                        <li><span>2018</span><br>SSC from municipal high school,Samalkot</li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+        
+    </div>
+</div>
+<!--SERVICES-->
+<!--Portfolio-->
+<div id="Projects">
+    <div class="container">
+        <h1 class="sub-title">PROJECTS</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/image.jpg">
+                <div class="layer">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>Design and build a portfolio with an "About", "Projects", and "Contact" section, ensuring it’s fully responsive</p>
+                    <a href="http://127.0.0.1:5500/index.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+                <img src="images/future-webdesign.jpg">
+                <div class="layer">
+                    <h3>Fetch Data from an API Using JavaScript </h3>
+                    <p> Fetch data from a public API (e.g., weather or joke API) and display the data dynamically on the webpage.</p>                                                        
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+<!----contact---->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">contact me</h1><br>
+                <p>suryakumar38960@gmail.com</p><br>
+                
+                <p>7032674535</p>
+                <br>
+                <a href="https://www.linkedin.com/in/velagaleti-bhaskar-3228b829b">linkedin</a>
+                <div><a href="images/VelagaletiBhaskarResume (2).pdf" download class="btn btn2">Downlode CV</a></div>
+            </div>
+            
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="NAME" placeholder="enter your name" required>
+                    <input type="text" name="email" placeholder="enter your email" required>
+                    <textarea name="massege" rows="6" placeholder="enter your msg"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+            </div>
+        </div> 
+    </div>
+    <div class="copyright"><p>Copyright @Bhaskar</p></div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
 
-  <script>
-    // ========== TO-DO LIST LOGIC ==========
-    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-    function renderTasks() {
-      const taskList = document.getElementById("taskList");
-      taskList.innerHTML = "";
-      tasks.forEach((task, index) => {
-        const li = document.createElement("li");
-        li.textContent = task;
-        const delBtn = document.createElement("button");
-        delBtn.textContent = "Delete";
-        delBtn.onclick = () => deleteTask(index);
-        li.appendChild(delBtn);
-        taskList.appendChild(li);
-      });
-      localStorage.setItem("tasks", JSON.stringify(tasks));
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
     }
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw712C3DHKSw59Gs0-IrYkOIm4MzTnLP3Vrcg2jfSuHlnPqFaOZoWFF6rBF_iMVgO3Y/exec'
+  const form = document.forms['submit-to-google-sheet']
 
-    function addTask() {
-      const taskInput = document.getElementById("taskInput");
-      if (taskInput.value.trim() !== "") {
-        tasks.push(taskInput.value.trim());
-        taskInput.value = "";
-        renderTasks();
-      }
-    }
-
-    function deleteTask(index) {
-      tasks.splice(index, 1);
-      renderTasks();
-    }
-
-    // ========== PRODUCT LISTING LOGIC ==========
-    const products = [
-      { name: "Smartphone", category: "electronics", price: 699, rating: 4.5 },
-      { name: "Laptop", category: "electronics", price: 999, rating: 4.7 },
-      { name: "T-Shirt", category: "clothing", price: 25, rating: 4.2 },
-      { name: "Jeans", category: "clothing", price: 45, rating: 4.3 },
-      { name: "Book: JavaScript Basics", category: "books", price: 15, rating: 4.8 },
-      { name: "Book: CSS Mastery", category: "books", price: 20, rating: 4.6 }
-    ];
-
-    function renderProducts() {
-      const category = document.getElementById("filterCategory").value;
-      const sortBy = document.getElementById("sortBy").value;
-
-      let filtered = products.filter(p => category === "all" || p.category === category);
-
-      filtered.sort((a, b) => {
-        if (sortBy === "price") return a.price - b.price;
-        if (sortBy === "rating") return b.rating - a.rating;
-      });
-
-      const list = document.getElementById("productList");
-      list.innerHTML = "";
-      filtered.forEach(p => {
-        list.innerHTML += `
-          <div class="product">
-            <h3>${p.name}</h3>
-            <p>Category: ${p.category}</p>
-            <p>Price: $${p.price}</p>
-            <p>Rating: ${p.rating}</p>
-          </div>`;
-      });
-    }
-
-    // Initialize both apps on page load
-    window.onload = () => {
-      renderTasks();
-      renderProducts();
-    };
-  </script>
-
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>
-
-<!--To-Do List & Product Filter App by using html and js i will create to-do list and filtring app-->
+<!--creating my own portfolio by using css and htm and js -->
